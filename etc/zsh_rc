@@ -1,0 +1,13 @@
+# This is the common zshrc.
+# It is same as bashrc. But, leaving open for a chance to use zsh specific things in here.
+
+export ATK_HOME=$HOME/.atk
+export ATK_BIN=${ATK_HOME}/bin
+export ATK_ETC=${ATK_HOME}/etc
+
+export PATH=$ATK_BIN:$PATH
+update_file=$ATK_BIN/atk-conditional-update.sh
+
+[ -f $update_file ] && {
+    $update_file
+}

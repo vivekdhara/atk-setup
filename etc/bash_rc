@@ -1,0 +1,12 @@
+# This is the common .bashrc
+export ATK_HOME=$HOME/.atk
+export ATK_BIN=${ATK_HOME}/bin
+export ATK_ETC=${ATK_HOME}/etc
+
+export PATH=$ATK_BIN:$PATH
+
+update_file=$ATK_BIN/atk-conditional-update.sh
+
+[ -f $update_file ] && {
+    $update_file
+}
